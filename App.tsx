@@ -4,6 +4,7 @@ import PDFComponent from './components/capabilities/pdfs/PDFComponent';
 import Step from './components/helpers/Step';
 import Header from './components/helpers/Header';
 import SkiaComponent from './components/capabilities/skia/SkiaComponent';
+import StringsComponent from './components/capabilities/strings/StringsComponent';
 
 function App(): JSX.Element {
   return (
@@ -15,6 +16,7 @@ function App(): JSX.Element {
         label="Showing fancy graphics"
         component={SkiaComponent}
       />
+      <Step number={3} label="Reading config" component={StringsComponent} />
     </ScrollView>
   );
 }
