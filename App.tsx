@@ -5,6 +5,7 @@ import Step from './components/helpers/Step';
 import Header from './components/helpers/Header';
 import SkiaComponent from './components/capabilities/skia/SkiaComponent';
 import StringsComponent from './components/capabilities/strings/StringsComponent';
+import ClipboardComponent from './components/capabilities/clipboard/ClipboardComponent';
 
 function App(): JSX.Element {
   return (
@@ -17,6 +18,7 @@ function App(): JSX.Element {
         component={SkiaComponent}
       />
       <Step number={3} label="Reading config" component={StringsComponent} />
+      <Step number={4} label="Clipboard" component={ClipboardComponent} />
     </ScrollView>
   );
 }
