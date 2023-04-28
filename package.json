@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@kingstinct/react-native-healthkit": "^6.1.0",
+    "@kingstinct/react-native-healthkit": "^6.1.1",
     "@react-native-clipboard/clipboard": "^1.11.2",
     "@shopify/react-native-skia": "^0.1.182",
     "expo": "~48.0.15",

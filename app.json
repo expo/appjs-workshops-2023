@@ -2,6 +2,16 @@
   "expo": {
     "name": "ExpoWorkshops",
     "slug": "workshops",
+    "plugins": [
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "NSHealthShareUsageDescription": "Your own custom usage description",
+          "NSHealthUpdateUsageDescription": "Health usage description",
+          "background": false
+        }
+      ]
+    ],
     "ios": {
       "bundleIdentifier": "com.expoworkshops.app"
     },
