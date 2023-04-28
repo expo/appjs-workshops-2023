@@ -6,6 +6,7 @@ import Header from './components/helpers/Header';
 import SkiaComponent from './components/capabilities/skia/SkiaComponent';
 import StringsComponent from './components/capabilities/strings/StringsComponent';
 import ClipboardComponent from './components/capabilities/clipboard/ClipboardComponent';
+import NativeChartsComponent from './components/capabilities/charts/NativeChartsComponent';
 
 function App(): JSX.Element {
   return (
@@ -19,6 +20,11 @@ function App(): JSX.Element {
       />
       <Step number={3} label="Reading config" component={StringsComponent} />
       <Step number={4} label="Clipboard" component={ClipboardComponent} />
+      <Step
+        number={5}
+        label="Native Charts"
+        component={NativeChartsComponent}
+      />
     </ScrollView>
   );
 }
