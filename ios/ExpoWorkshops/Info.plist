@@ -51,6 +51,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We use it to make you eat apples</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We don&apos;t share your info with anyone!</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

@@ -7,6 +7,7 @@ import SkiaComponent from './components/capabilities/skia/SkiaComponent';
 import StringsComponent from './components/capabilities/strings/StringsComponent';
 import ClipboardComponent from './components/capabilities/clipboard/ClipboardComponent';
 import NativeChartsComponent from './components/capabilities/charts/NativeChartsComponent';
+import HealthKitComponent from './components/capabilities/healthkit/HealthKitComponent';
 
 function App(): JSX.Element {
   return (
@@ -18,10 +19,11 @@ function App(): JSX.Element {
         label="Showing fancy graphics"
         component={SkiaComponent}
       />
-      <Step number={3} label="Reading config" component={StringsComponent} />
-      <Step number={4} label="Clipboard" component={ClipboardComponent} />
+      <Step number={3} label="Health Kit" component={HealthKitComponent} />
+      <Step number={4} label="Reading config" component={StringsComponent} />
+      <Step number={5} label="Clipboard" component={ClipboardComponent} />
       <Step
-        number={5}
+        number={6}
         label="Native Charts"
         component={NativeChartsComponent}
       />
