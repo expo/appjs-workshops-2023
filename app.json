@@ -1,4 +1,12 @@
 {
-  "name": "ExpoWorkshops",
-  "displayName": "ExpoWorkshops"
+  "expo": {
+    "name": "ExpoWorkshops",
+    "slug": "workshops",
+    "ios": {
+      "bundleIdentifier": "com.expoworkshops.app"
+    },
+    "android": {
+      "package": "com.expoworkshops.app"
+    }
+  }
 }
