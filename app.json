@@ -10,6 +10,12 @@
           "NSHealthUpdateUsageDescription": "Health usage description",
           "background": false
         }
+      ],
+      [
+        "./plugins/setstrings.plugin",
+        {
+          "text": "Hello from workshops 🪄"
+        }
       ]
     ],
     "ios": {

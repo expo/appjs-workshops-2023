@@ -50,6 +50,8 @@
     <string>Your own custom usage description</string>
     <key>NSHealthUpdateUsageDescription</key>
     <string>Health usage description</string>
+    <key>OurConfigKey</key>
+    <string>Hello from workshops 🪄</string>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>
     <key>UIRequiredDeviceCapabilities</key>
