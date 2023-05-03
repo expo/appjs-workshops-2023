@@ -1,13 +1,13 @@
-import Clipboard from '@react-native-clipboard/clipboard';
+import * as Clipboard from 'expo-clipboard';
 import React from 'react';
 import { Alert, Button, StyleSheet, View } from 'react-native';
 
 ClipboardComponent.instructions = `
 This component lets you copy and paste text from clipboard.
 
-It uses this library:
+It now uses the expo-clipboard package:
 
-[https://www.npmjs.com/package/@react-native-clipboard/clipboard](https://www.npmjs.com/package/@react-native-clipboard/clipboard)
+[https://docs.expo.dev/versions/latest/sdk/clipboard/](https://docs.expo.dev/versions/latest/sdk/clipboard/)
 `;
 
 function ClipboardComponent() {
@@ -15,13 +15,13 @@ function ClipboardComponent() {
     <View style={styles.container}>
       <Button
         onPress={() => {
-          Clipboard.setString('Hello From Workshops');
+          Clipboard.setStringAsync('Hello From Workshops');
         }}
         title="Copy to clipboard"
       />
       <Button
         onPress={() => {
-          Clipboard.getString().then(Alert.alert);
+          Clipboard.getStringAsync().then(Alert.alert);
         }}
         title="Read from clipboard"
       />
