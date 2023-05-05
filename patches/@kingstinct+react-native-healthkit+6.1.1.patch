@@ -1,0 +1,16 @@
+diff --git a/node_modules/@kingstinct/react-native-healthkit/app.plugin.js b/node_modules/@kingstinct/react-native-healthkit/app.plugin.js
+index 690efe7..b790ea2 100644
+--- a/node_modules/@kingstinct/react-native-healthkit/app.plugin.js
++++ b/node_modules/@kingstinct/react-native-healthkit/app.plugin.js
+@@ -40,7 +40,10 @@ const {
+  */
+ const withEntitlementsPlugin = (config, { background }) => withEntitlementsPlist(config, (config) => {
+   config.modResults['com.apple.developer.healthkit'] = true
+-  config.modResults['com.apple.developer.healthkit.background-delivery'] = background !== false
++  config.modResults['com.apple.developer.healthkit.access'] = []
++  if(background){
++    config.modResults['com.apple.developer.healthkit.background-delivery'] = true
++  }
+   return config
+ })
+ 

@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "expo start --dev-client",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@kingstinct/react-native-healthkit": "^6.1.1",
@@ -17,6 +18,7 @@
     "expo-clipboard": "^4.1.2",
     "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",
+    "patch-package": "^7.0.0",
     "react": "18.2.0",
     "react-native": "0.71.7",
     "react-native-blob-util": "^0.17.3",
