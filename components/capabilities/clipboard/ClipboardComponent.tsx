@@ -1,6 +1,6 @@
-import React from 'react';
-import {Alert, Button, StyleSheet, Text, View} from 'react-native';
 import Clipboard from '@react-native-clipboard/clipboard';
+import React from 'react';
+import { Alert, Button, StyleSheet, View } from 'react-native';
 
 ClipboardComponent.instructions = `
 This component lets you copy and paste text from clipboard.

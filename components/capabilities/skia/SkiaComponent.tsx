@@ -1,5 +1,3 @@
-import React from 'react';
-import {useWindowDimensions} from 'react-native';
 import {
   Canvas,
   Image,
@@ -9,7 +7,10 @@ import {
   useComputedValue,
   useImage,
 } from '@shopify/react-native-skia';
-import {cloudShader} from './cloudShader';
+import React from 'react';
+import { useWindowDimensions } from 'react-native';
+
+import { cloudShader } from './cloudShader';
 
 const source = Skia.RuntimeEffect.Make(cloudShader)!;
 
@@ -19,7 +20,7 @@ This component uses Skia to render a cloud shader on top of a satellite image.
 
 function SkiaComponent() {
   const map = useImage(require('./map.jpeg'));
-  const {width} = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const clock = useClockValue();
 
   const uniforms = useComputedValue(() => {
@@ -29,11 +30,9 @@ function SkiaComponent() {
     };
   }, [clock]);
   return (
-    <Canvas style={{height: 400, width}}>
+    <Canvas style={{ height: 400, width }}>
       <RuntimeShader source={source} uniforms={uniforms} />
-      {map && (
-        <Image image={map} fit="cover" x={0} y={0} width={width} height={400} />
-      )}
+      {map && <Image image={map} fit="cover" x={0} y={0} width={width} height={400} />}
     </Canvas>
   );
 }

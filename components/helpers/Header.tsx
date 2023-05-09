@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ViewProps, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 function Header() {
   return (
@@ -7,8 +7,7 @@ function Header() {
       <View style={styles.header}>
         <Text style={styles.title}>Welcome 👋</Text>
         <Text style={styles.subtitle}>
-          This is a sample application showcasing some capabilities possible in
-          React Native.
+          This is a sample application showcasing some capabilities possible in React Native.
         </Text>
       </View>
     </View>

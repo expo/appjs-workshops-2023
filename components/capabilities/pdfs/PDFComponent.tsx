@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Pdf from 'react-native-pdf';
 
 PDFComponent.instructions = `
@@ -17,12 +17,7 @@ const source = {
 function PDFComponent() {
   return (
     <View style={styles.container} pointerEvents="none">
-      <Pdf
-        source={source}
-        style={styles.pdf}
-        singlePage
-        trustAllCerts={false}
-      />
+      <Pdf source={source} style={styles.pdf} singlePage trustAllCerts={false} />
     </View>
   );
 }

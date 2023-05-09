@@ -1,12 +1,11 @@
-import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
-
 import HealthKit, {
   HKAuthorizationRequestStatus,
   HKQuantityTypeIdentifier,
 } from '@kingstinct/react-native-healthkit';
+import React from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-const {useHealthkitAuthorization, useMostRecentQuantitySample} = HealthKit;
+const { useHealthkitAuthorization, useMostRecentQuantitySample } = HealthKit;
 
 HealthKitComponent.instructions = `
 This component will let you use HealthKit in React Native.
@@ -21,9 +20,7 @@ Follow these steps to add sample data:
 `;
 
 function HealthKitData() {
-  const bodyTemperature = useMostRecentQuantitySample(
-    HKQuantityTypeIdentifier.bodyTemperature,
-  );
+  const bodyTemperature = useMostRecentQuantitySample(HKQuantityTypeIdentifier.bodyTemperature);
 
   return (
     <Text style={styles.container}>
@@ -40,19 +37,16 @@ function HealthKitData() {
 }
 
 function HealthKitComponent() {
-  const [authorizationStatus, requestAuthorization] = useHealthkitAuthorization(
-    [HKQuantityTypeIdentifier.bodyTemperature],
-  );
+  const [authorizationStatus, requestAuthorization] = useHealthkitAuthorization([
+    HKQuantityTypeIdentifier.bodyTemperature,
+  ]);
   if (authorizationStatus === HKAuthorizationRequestStatus.unnecessary) {
     return <HealthKitData />;
   }
 
   return (
     <View style={styles.container}>
-      <Button
-        onPress={requestAuthorization}
-        title="Request HealthKit Authorization"
-      />
+      <Button onPress={requestAuthorization} title="Request HealthKit Authorization" />
     </View>
   );
 }

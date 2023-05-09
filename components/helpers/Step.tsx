@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ViewProps, Text, StyleSheet} from 'react-native';
+import { View, ViewProps, Text, StyleSheet } from 'react-native';
 import Markdown from 'react-native-markdown-display';
 interface StepProps extends ViewProps {
   label: string;

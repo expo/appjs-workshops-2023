@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import getValue from 'react-native-get-values';
-import {StyleSheet, Text, View} from 'react-native';
 
 StringsComponent.instructions = `
 We can read strings from \`Info.plist\` AND \`strings.xml\` files and display them in the UI.
@@ -9,17 +9,17 @@ We can read strings from \`Info.plist\` AND \`strings.xml\` files and display th
 const KEY = 'OurConfigKey';
 
 function StringsComponent() {
-  const [{error, value}, setRes] = React.useState<{
+  const [{ error, value }, setRes] = React.useState<{
     value?: string;
     error?: string;
   }>({});
   useEffect(() => {
     getValue(KEY)
-      .then(v => {
-        setRes({value: v});
+      .then((v) => {
+        setRes({ value: v });
       })
-      .catch(e => {
-        setRes({error: e.message});
+      .catch((e) => {
+        setRes({ error: e.message });
       });
   }, []);
 
