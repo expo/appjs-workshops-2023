@@ -700,3 +700,13 @@ eas update --branch [branch] --message [message]
 - runtime version also must match for build and update
 - the channel on the build must be linked to that branch where the update exists (you can change that with eas:edit)
 - update must be newer than the build (this trips people most)
+
+### Additional resources
+- [Introduction to EAS Update](https://docs.expo.dev/eas-update/introduction/)
+- [How EAS Update works](https://docs.expo.dev/eas-update/how-eas-update-works/)
+
+---
+
+## Resources
+
+- Check out [Expo docs for more information](https://docs.expo.dev/) on Config plugins, Prebuild, EAS Build, Submit, Update, etc.
